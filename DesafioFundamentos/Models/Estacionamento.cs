@@ -74,7 +74,7 @@ namespace DesafioFundamentos.Models
                 DateTime horaSaida = DateTime.Now;
                 TimeSpan tempoEstacionado = horaSaida - horaEntrada;
 
-                if (tempoEstacionado.TotalMinutes <= 1)
+                if (tempoEstacionado.TotalMinutes <= 10)
                 {
                     Console.WriteLine("O veículo ficou até 10 minutos. Tolerância gratuita aplicada.");
                     veiculos.Remove(placa);
