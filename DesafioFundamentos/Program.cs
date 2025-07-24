@@ -44,11 +44,23 @@ while (exibirMenu)
             break;
 
         case "4":
-            exibirMenu = false;
+            Console.WriteLine("Tem certeza que deseja sair? (S/N): ");
+            string confirmacao = Console.ReadLine().Trim().ToUpper();
+
+            if (confirmacao == "S")
+            {
+                exibirMenu = false;
+                Console.WriteLine("Encerrando o programa...");
+                Environment.Exit(0);
+            }
+            else
+            {
+                Console.WriteLine("Voltando ao menu...");
+            }
             break;
 
-        default:
-            Console.WriteLine("Opção inválida");
+            default:
+                Console.WriteLine("Opção inválida");
             break;
     }
 
